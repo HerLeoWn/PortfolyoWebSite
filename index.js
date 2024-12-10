@@ -7,7 +7,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (res,req)=>{
-    req.send("Welcome to the Simple API!");
+    req.render("index.ejs")
 })
 
 app.listen((port), () =>{
